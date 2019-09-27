@@ -22,5 +22,6 @@ node {
 
     stage "Deploy"
 
-        sh "sed -i 's#TAG#'$tag'#' ../hello-kenzan/k8s/deployment.yaml | kubectl apply -f -"
+        sh "sed -i 's#TAG#'$tag'#' ../hello-kenzan/k8s/deployment.yaml "
+        sh "kubectl apply -f ../hello-kenzan/k8s/deployment.yaml"
 }
